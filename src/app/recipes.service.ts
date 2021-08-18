@@ -8,7 +8,7 @@ import { Recipe } from './recipes/recipe.model';
 export class RecipesService {
   
 
-private recipes: Recipe[] = [
+  private recipes: Recipe[] = [
     {
         id: 'r1',
         title:'schnitzel',
@@ -21,12 +21,12 @@ private recipes: Recipe[] = [
       imageUrl:'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/FB756ECF-34CD-42A6-8D91-47C6944EB93F/Derivates/6524a319-89db-46e5-9774-98e10794b47a.jpg',
       ingredients: [' panko (Japanese-style breadcrumbs)','large eggs, lightly beaten', 'water', 'ound chicken cutlets, thinly sliced into 1/3-in. wide strips']
     
-    },
-  ]
+    }
+  ];
 
   constructor() { }
   getAllrecipes(){
-    return[...this.recipes];
+    return [...this.recipes];
   }
   gettingRecipe(recipeId: string){
     return {...this.recipes.find(recipe => {
